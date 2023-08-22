@@ -68,7 +68,8 @@ class LetterAdapter :
         // Assigns a [OnClickListener] to the button contained in the [ViewHolder]
         holder.button.setOnClickListener {
 
-            val action = LetterListFragmentDirections.actionLetterListFragmentToWordListFragment(letter = holder.button.text.toString())
+            val action =
+                LetterListFragmentDirections.actionLetterListFragmentToWordListFragment(letter = holder.button.text.toString())
 
             holder.view.findNavController().navigate(action)
         }

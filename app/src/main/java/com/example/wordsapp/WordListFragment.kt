@@ -35,8 +35,8 @@ class WordListFragment : Fragment() {
      * a DetailListFragment instance.
      */
     companion object {
-        val LETTER = "letter"
-        val SEARCH_PREFIX = "https://www.google.com/search?q="
+        const val LETTER = "letter"
+        const val SEARCH_PREFIX = "https://www.google.com/search?q="
     }
 
     private var _binding: FragmentWordListBinding? = null
@@ -70,6 +70,8 @@ class WordListFragment : Fragment() {
         val recyclerView = binding.recyclerView
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = WordAdapter(letterId, requireContext())
+
+        WordListFragmentArgs
 
         // Adds a [DividerItemDecoration] between items
         recyclerView.addItemDecoration(

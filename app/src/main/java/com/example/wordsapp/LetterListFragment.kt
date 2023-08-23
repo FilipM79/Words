@@ -40,7 +40,6 @@ class LetterListFragment : Fragment() {
     private val binding get() = _binding!!
 
     private lateinit var recyclerView: RecyclerView
-
     // Keeps track of which LayoutManager is in use for the [RecyclerView]
     private var isLinearLayoutManager = true
 
@@ -53,7 +52,7 @@ class LetterListFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View? {
         // Retrieve and inflate the layout for this fragment
         _binding = FragmentLetterListBinding.inflate(inflater, container, false)
         val view = binding.root
